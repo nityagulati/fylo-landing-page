@@ -1,0 +1,146 @@
+/* Desktop first layout - min-width: 1024px */
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  color: #808080;
+}
+
+.container {
+  display: flex;
+}
+
+/* Left Column - illustration section */
+.column-left {
+  width: 50%;
+  height: 100vh;
+  background-image: url("images/bg-intro.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.illustration {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  top: 25vh;
+  left: 35%;
+}
+
+/* Right column - content section */
+.attribution {  font-size: .8rem; text-align: center; }
+.attribution__link {  color: #3E52A3; }
+
+.btn {
+  background-color: #05D69B;
+  border: none;
+  border-radius: 4px;
+  padding: 3% 6%;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: center;
+  box-shadow: 0 4px 4px 0 #BBB8FA;
+  text-decoration: none;
+}
+
+.btn:hover {  background-color: #BBB8FA; }
+.column-right {  width: 50%; }
+
+.email {
+  width: 55%;
+  border: none;
+  border-radius: 4px;
+  padding: 3%;
+  margin-right: 2%;
+  color: #BBB8FA;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 4px 0;
+}
+
+.header {  padding: 8%; padding-bottom: 0; }
+.icons {  color: #000000; }
+.logo {  padding-right: 50%; vertical-align: middle; }
+.main-content {  padding: 8%; }
+.message {  padding-top: 1.5%; padding-bottom: 2%; line-height: 1.2; }
+.privacy-link {  font-size: 1rem; }
+
+.signup-label {
+  font-family: 'Raleway';
+  font-weight: 700;
+  color: #070439;
+  font-size: 1.5rem;
+  line-height: 2.5;
+}
+
+.site-footer {  padding: 2% 5%; text-align: right; }
+.social-links {  padding-right: 3%; }
+
+.title {
+  line-height: 1.3;
+  font-size: 2rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #070439;
+}
+
+/* Responsive Layout - scaled down */
+/* Smaller browser and similar screens */
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+  .illustration {  left: 15%; }
+  .logo {  padding-right: 30%; }
+}
+
+/* iPadPro and similar screens */
+@media screen and (min-width: 1024px) and (min-height: 1366px) {
+  .header {  padding-top: 20%; }
+  .icons {  font-size: xx-large; }
+  .illustration {  width: 70%; left: 15%; }
+  .logo {  width: 40%; padding-right: 25%; }
+  .main-content {  padding-top: 40%; }
+  .site-footer {  padding-top: 10%; }
+}
+
+/* iPad and similar screens */
+@media screen and (max-width: 768px) {
+  .header {  padding-top: 10%; }
+  .illustration {  left: 15%; }
+  .logo {  padding-right: 25%; }
+  .main-content {  padding-top: 30%; }
+  .site-footer {  padding-top: 10%; }
+}
+
+/* iPhone and similar screens */
+@media screen and (max-width: 420px) {
+  .btn {  display: block; width: max-content; }
+  .column-left {  width: 100%; }
+  .column-right {  width: 100%; }
+  .container {  display: block; }
+  .email {  display: block; width: 90%; margin-bottom: 5%; }
+
+  .header {
+    width: -webkit-fill-available;
+    position: absolute;
+    top: 0;
+  }
+
+  .icons {  color: #fff; }
+  .illustration {  left: 15%; }
+
+  .logo {
+    padding-right: 25%;
+    filter: brightness(0) invert(1);
+    -webkit-filter: brightness(0) invert(1);
+  }
+
+  .main-content {  padding-top: 0; }
+}
+
+/* iPhone 5/SE and similar screens */
+@media screen and (max-width: 320px) {
+  .illustration {  width: 250px; }
+  .logo {  width: 40%; padding-right: 20%; }
+}
